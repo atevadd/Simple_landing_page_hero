@@ -1,0 +1,224 @@
+:root{
+    --main-bg-color: #030303;
+    --text-color: #fff;
+    --primary-color: #fc205d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'nunito', sans-serif;
+}
+
+.body{
+    /* overflow: hidden; */
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--main-bg-color);
+    border-bottom: 10px solid var(--primary-color);
+    color: white;
+    /* overflow: hidden; */
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+
+}
+
+.container .navbar{
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .navbar h1{
+    font-size: 1.8rem;
+}
+.container .navbar h1 span{
+    color: #fc205d;
+}
+
+.container .navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.container .navbar ul li{
+    display: inline-block;
+    padding: 0 25px;
+}
+
+.container .navbar ul li.btn{
+    padding: 0 0;
+}
+.container .navbar ul li a:hover{
+    color: var(--primary-color);
+}
+.container .navbar ul li button{
+    padding: 10px 25px;
+    border: 1px solid var(--primary-color);
+    background: #fc205e3b;
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.container .landing{
+    width: 100%;
+    height: 70vh;
+    /* border: 2px solid green; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.container .landing .landing-content{
+    width: 47%;
+    height: 250px;
+    /* border: 1px solid red; */
+    animation-name: slideleft;
+    animation-duration: 1.2s;
+}
+
+.container .landing .landing-content h1{
+    margin: 0 0 18px 0;
+    font-size: 2.5rem;
+}
+.container .landing .landing-content p{
+    margin: 0 0 40px 0;
+    font-size: 14px;
+    color: #707070;
+}
+.container .landing .landing-content a{
+    padding: 10px 35px;
+    border: 1px solid #fc205d;
+    border-radius: 4px;
+    background-color: #fc205e3b;
+    color: #fc205d;
+}
+.container .landing .landing-content a:hover{
+    background-color: #fc205e6e;
+    transition: all 300ms ease-out;
+}
+.container .landing .landing-content a.first{
+    margin-right: 10px;
+    background-color: #fc205d;
+    color: white;
+    border: 4px;
+}
+.container .landing .landing-content a.first:hover{
+    background-color: #ff0d51;
+    transition: all 300ms ease-out;
+}
+
+.container .landing .landing-image{
+    width: 45%;
+    animation-name: slideright;
+    animation-duration: 1.2s;
+}
+
+.container .landing .landing-image img{
+    border: 1px solid #fc205d;
+    box-shadow: 0px 0px 10px #fc205d;
+}
+
+.container .scroller{
+    width: 30px;
+    height: 45px;
+    border: 1px solid white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 35px auto;
+    animation-name: up;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    transition: all 400ms ease-out;
+}
+.container .scroller .dot{
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin: 25px auto;
+    /* animation-name: updown;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s; */
+    transition: all 300ms ease-out;
+}
+
+
+/* 
+@keyframes updown{
+    0%{
+        margin: 5px auto;
+        
+    }
+
+    50%{
+        margin: 25px auto;
+    }
+    100%{
+        margin: 25px auto;
+        transition: all 400ms ease-out;
+    }
+} */
+@keyframes up{
+    0%{
+        margin: 45px auto 0;
+        transition: all 400ms ease-out;
+    }
+
+    50%{
+        margin: 40px auto 0;
+    }
+
+    100%{
+        margin: 45px auto 0;
+        transition: all 400ms ease-out;
+    }
+}
+
+@keyframes slideleft{
+	0%{
+		transform: translateX(-150px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slideright{
+	0%{
+		transform: translateX(150px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
